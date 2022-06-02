@@ -43,7 +43,7 @@ const htmlPlugins = glob
     return new HtmlWebpackPlugin({
       filename: outputFilename,
       template: path.resolve(__dirname, `../src/html/pages/${fileName}`),
-      minify: false,  // html-loader側でminifyされるため
+      minify: false, // html-loader側でminifyされるため
       inject: false, // htmlにscriptタグを追加しない
     })
   })
@@ -134,7 +134,8 @@ module.exports = {
           MiniCSSExtractPlugin.loader,
           {
             loader: 'css-loader',
-            options: { // https://github.com/webpack-contrib/css-loader#options
+            options: {
+              // https://github.com/webpack-contrib/css-loader#options
               url: false,
               importLoaders: 2,
             },
@@ -146,8 +147,8 @@ module.exports = {
                 plugins: [
                   ['autoprefixer', {}],
                   ['node-css-mqpacker', {}],
-                ]
-              }
+                ],
+              },
             },
           },
           'sass-loader',

@@ -5,7 +5,9 @@
     "dev": "webpack serve --config webpack/dev.js",
     "build:dev": "webpack --config ./webpack/prod.js --node-env development",
     "build:stg": "webpack --config ./webpack/prod.js --node-env staging",
-    "build:prd": "webpack --config ./webpack/prod.js --node-env production"
+    "build:prd": "webpack --config ./webpack/prod.js --node-env production",
+    "format": "prettier --write \"src/js/**/*.js\" webpack/*.js env/*.js",
+    "lint": "eslint \"src/js/**/*.js\" webpack/*.js env/*.js"
   },
   "browserslist": [
     "last 2 versions",

@@ -43,6 +43,9 @@ npm ci
 - `develop` 開発
 - `feature/**` 機能開発 or 開発者（直接developもOK）
 
+## JavaScript
+エディタの設定でファイル保存時にPrettierを実行してください。
+
 ## Style design
 [FLOCSS](https://github.com/hiloki/flocss) をベースに設計しています。  
 Block、Element、Modifierはそれぞれ`_`、`-`で接続します。
