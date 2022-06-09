@@ -21,6 +21,16 @@ glob
     entries[key] = path.resolve(__dirname, `../src/js/pages/${fileName}`)
   })
 
+// ts
+glob
+  .sync('**/!(_)*.ts', {
+    cwd: path.resolve(__dirname, '../src/js/pages/'),
+  })
+  .forEach((fileName) => {
+    const key = `assets/js/${fileName.replace(/.ts$/, '')}`
+    entries[key] = path.resolve(__dirname, `../src/js/pages/${fileName}`)
+  })
+
 // css
 entries['assets/css/app'] = path.resolve(__dirname, '../src/css/app.scss')
 // ページ別にする場合
@@ -49,6 +59,7 @@ const htmlPlugins = glob
   })
 
 module.exports = {
+  // target: ['web', 'es5'], // ES5(IE11等)向けの指定
   target: ['web', 'es5'], // ES5(IE11等)向けの指定
 
   entry: entries,
@@ -117,6 +128,12 @@ module.exports = {
         ],
       },
 
+      // ts
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+      },
+
       // shader
       // {
       //   test: /\.(glsl|vs|fs|vert|frag)$/,
@@ -155,6 +172,10 @@ module.exports = {
         ],
       },
     ],
+  },
+
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
 
   optimization: {
