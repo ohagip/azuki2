@@ -3,8 +3,8 @@ Frontend Starter Kit
 
 ## Engines
 ```
-node: 16.4.1
-npm: 7.19.1
+node: 16.15.1
+npm: 8.11.0
 ```
 
 ## Setup
