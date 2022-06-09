@@ -93,7 +93,7 @@ module.exports = {
             },
           },
           {
-            loader: 'ejs-plain-loader',
+            loader: 'template-ejs-loader',
             options: {
               data: {
                 CONFIG: config,
