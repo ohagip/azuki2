@@ -1,7 +1,7 @@
-const { merge } = require('webpack-merge')
-const commonConfiguration = require('./common.js')
+import { merge } from 'webpack-merge'
+import commonConfiguration from './common.js'
 
-module.exports = merge(commonConfiguration, {
+export default merge(commonConfiguration, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {

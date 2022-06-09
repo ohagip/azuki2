@@ -6,8 +6,8 @@
     "build:dev": "webpack --config ./webpack/prod.js --node-env development",
     "build:stg": "webpack --config ./webpack/prod.js --node-env staging",
     "build:prd": "webpack --config ./webpack/prod.js --node-env production",
-    "format": "prettier --write \"src/js/**/*.js\" webpack/*.js env/*.js",
-    "lint": "eslint \"src/js/**/*.js\" webpack/*.js env/*.js"
+    "format": "prettier --write \"src/js/**/*.{js,ts}\" webpack/*.js env/*.js",
+    "lint": "eslint \"src/js/**/*.{js,ts}\" webpack/*.js env/*.js"
   },
   "browserslist": [
     "last 2 versions"
@@ -15,6 +15,8 @@
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",
+    "@typescript-eslint/eslint-plugin": "^5.27.1",
+    "@typescript-eslint/parser": "^5.27.1",
     "autoprefixer": "^10.4.7",
     "babel-loader": "^8.2.5",
     "clean-webpack-plugin": "^4.0.0",
