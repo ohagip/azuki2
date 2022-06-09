@@ -1,13 +1,13 @@
-import path from 'path'
-import glob from 'glob'
-import { DefinePlugin } from 'webpack'
-import CopyWebpackPlugin from 'copy-webpack-plugin'
-import HtmlWebpackPlugin from 'html-webpack-plugin'
-import RemoveEmptyScriptsPlugin from 'webpack-remove-empty-scripts'
-import MiniCSSExtractPlugin from 'mini-css-extract-plugin'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const path = require('path')
+const glob = require('glob')
+const { DefinePlugin } = require('webpack')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts')
+const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
 const env = process.env.NODE_ENV || 'development'
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const config = require(path.resolve(__dirname, `../env/${env}.js`))
 config.env = env
 

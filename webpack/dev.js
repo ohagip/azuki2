@@ -1,7 +1,8 @@
-import { merge } from 'webpack-merge'
-import commonConfiguration from './common.js'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { merge } = require('webpack-merge')
+const commonConfiguration = require('./common.js')
 
-export default merge(commonConfiguration, {
+module.exports = merge(commonConfiguration, {
   mode: 'development',
   devtool: 'source-map',
   devServer: {

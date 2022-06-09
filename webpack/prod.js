@@ -1,7 +1,8 @@
-import { merge } from 'webpack-merge'
-import commonConfiguration from './common.js'
-import { CleanWebpackPlugin } from 'clean-webpack-plugin'
-import TerserPlugin from 'terser-webpack-plugin'
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { merge } = require('webpack-merge')
+const commonConfiguration = require('./common.js')
+const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 
 module.exports = merge(commonConfiguration, {
   mode: 'production',
