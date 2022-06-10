@@ -43,8 +43,11 @@ npm ci
 - `develop` 開発
 - `feature/**` 機能開発 or 開発者（直接developもOK）
 
+## Linter & Formatter
+エディタの設定でファイル保存時に実行してください。
+
 ## JavaScript
-エディタの設定でファイル保存時にPrettierを実行してください。
+TypeScriptも利用可能です。
 
 ## Style design
 [FLOCSS](https://github.com/hiloki/flocss) をベースに設計しています。  
