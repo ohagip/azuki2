@@ -30,8 +30,8 @@ npm ci
 │ ├ html
 │ │ └ pages/**/* [エントリーポイント]
 │ └ js
-│    └ pages/* [エントリーポイント]
-├ static [静的ファイル]
+│ │ └ pages/* [エントリーポイント]
+│ └ static [静的ファイル]
 └ webpack
     ├ common.js
     ├ dev.js
