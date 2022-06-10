@@ -5,6 +5,6 @@
 // eslint-disable-next-line no-undef
 const config = CONFIG
 
-config.imagesPath = `${config.contentsRoot}assets/images/`
+config.imagesPath = `${config.basePath}assets/images/`
 
 export default config

@@ -1,7 +1,7 @@
 module.exports = {
   siteUrl: 'https://production.example.com',
   apiUrl: 'https://production.example.com/api/',
-  contentsRoot: '/',
+  basePath: '/',
   gaTrackingId: 'UA-________-_',
   debugMode: false,
 }
