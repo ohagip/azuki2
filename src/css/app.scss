@@ -1,29 +1,30 @@
 // ==========================================================================
 // Foundation
 // ==========================================================================
-@import './foundation/_config';
-@import './foundation/_function';
-@import './foundation/_mixin';
+@import './foundation/config';
+@import './foundation/function';
+@import './foundation/mixin';
 @import './foundation/animation';
-@import './foundation/_destyle'; // reset
-@import './foundation/_base';
+@import './foundation/destyle'; // reset
+@import './foundation/base';
 
 // ==========================================================================
 // Libs （ライブラリはnpmかlibsフォルダからimportする）
 // ==========================================================================
 
-//@import '../../node_modules/slick-carousel/slick/slick';
-//@import './libs/_slick';
+// @import '../../node_modules/slick-carousel/slick/slick';
+// @import './libs/slick';
 
 // ==========================================================================
 // Layout
 // ==========================================================================
 
-@import './layout/_wrap';
-@import './layout/_footer';
-@import './layout/_header';
-@import './layout/_main';
-//@import './layout/_sidebar';
+@import './layout/wrap';
+@import './layout/footer';
+@import './layout/header';
+@import './layout/main';
+
+// @import './layout/sidebar';
 
 // ==========================================================================
 // Object
@@ -33,27 +34,27 @@
 // Component
 // -----------------------------------------------------------------
 
-@import './object/component/_container';
+@import './object/component/container';
 
 // -----------------------------------------------------------------
 // Project
 // -----------------------------------------------------------------
 
-@import './object/project/_footer';
-@import './object/project/_header';
-@import './object/project/_menu';
+@import './object/project/footer';
+@import './object/project/header';
+@import './object/project/menu';
 
 // -----------------------------------------------------------------
 // Utility
 // -----------------------------------------------------------------
 
-@import './object/utility/_clearfix';
-@import './object/utility/_margin';
-@import './object/utility/_only';
+@import './object/utility/clearfix';
+@import './object/utility/margin';
+@import './object/utility/only';
 
 // ==========================================================================
 // Page
 // ==========================================================================
 
-@import './pages/_sample';
-@import './pages/_index';
+@import './pages/sample';
+@import './pages/index';
