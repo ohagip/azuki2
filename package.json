@@ -6,14 +6,12 @@
     "build:dev": "webpack --config ./webpack/prod.js --node-env development",
     "build:stg": "webpack --config ./webpack/prod.js --node-env staging",
     "build:prd": "webpack --config ./webpack/prod.js --node-env production",
-    "format": "npm run format:prettier && npm run format:es && npm run format:style",
+    "format": "npm run format:prettier && npm run format:es",
     "format:prettier": "prettier --write \"**/*.{js,ts,scss}\"",
     "format:es": "eslint --fix \"**/*.{js,ts}\"",
-    "format:style": "stylelint --fix \"**/*.scss\"",
-    "lint": "npm run lint:prettier && npm run lint:es && npm run lint:style",
+    "lint": "npm run lint:prettier && npm run lint:es",
     "lint:prettier": "prettier --check \"**/*.{js,ts,scss}\"",
-    "lint:es": "eslint \"**/*.{js,ts}\"",
-    "lint:style": "stylelint \"**/*.scss\""
+    "lint:es": "eslint \"**/*.{js,ts}\""
   },
   "browserslist": [
     "last 2 versions"

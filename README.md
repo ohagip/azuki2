@@ -44,7 +44,12 @@ npm ci
 - `feature/**` 機能開発 or 開発者（直接developもOK）
 
 ## Linter & Formatter
-エディタの設定でファイル保存時に実行してください。
+エディタの設定でファイル保存時にPrettierを実行してください。
+
+## 開発環境のみビルドされるコード
+以下のディレクトリ内のコードは開発環境のみビルドします。
+- src/html/pages/dev/
+- src/js/pages/dev/
 
 ## JavaScript
 TypeScriptも利用可能です。
@@ -62,4 +67,19 @@ Block_Element-Modifier
 .page-{{pageId}} {
   .sample {}
 }
+```
+メンテナンスを考慮し、なるべく以下の点に注意してください。
+- セレクタにタグを使用しない
+- ネストを利用してセレクタを複数階層にしない
+```scss
+// NG
+.sampleParent {
+  .p {
+    .sampleChild {}
+  }
+}
+
+// OK
+.sample_child {} // 設計ルールにそった感じにする
+.sample > img {} // 親子セレクタやあきらかにタグが限定できるときはOK
 ```
