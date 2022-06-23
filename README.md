@@ -43,15 +43,13 @@ npm ci
 - `develop` 開発
 - `feature/**` 機能開発 or 開発者（直接developもOK）
 
-## Linter & Formatter
-エディタの設定でファイル保存時にPrettierを実行してください。
-
 ## 開発環境のみビルドされるコード
 以下のディレクトリ内のコードは開発環境のみビルドします。
 - src/html/pages/dev/
 - src/js/pages/dev/
 
 ## JavaScript
+エディタの設定でファイル保存時にPrettierを実行してください。  
 TypeScriptも利用可能です。
 
 ## Style design
