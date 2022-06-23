@@ -8,6 +8,7 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts')
 const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 
 const env = process.env.NODE_ENV || 'development'
+const isDev = env === 'development'
 const config = require(path.resolve(__dirname, `../env/${env}.js`))
 config.env = env
 
@@ -16,6 +17,7 @@ const entries = {}
 glob
   .sync('**/!(_)*.js', {
     cwd: path.resolve(__dirname, '../src/js/pages/'),
+    ignore: isDev ? [] : ['dev/**/*.js'],
   })
   .forEach((fileName) => {
     const key = `assets/js/${fileName.replace(/.js$/, '')}`
@@ -48,6 +50,7 @@ entries['assets/css/app'] = path.resolve(__dirname, '../src/css/app.scss')
 const htmlPlugins = glob
   .sync('**/!(_)*.ejs', {
     cwd: path.resolve(__dirname, '../src/html/pages/'),
+    ignore: isDev ? [] : ['dev/**/*.ejs'],
   })
   .map((fileName) => {
     const outputFilename = `${fileName.replace(/.ejs$/, '')}.html`
@@ -177,6 +180,9 @@ module.exports = {
 
   resolve: {
     extensions: ['.ts', '.js'],
+    alias: {
+      '@': path.resolve(__dirname, `../src/js/`),
+    },
   },
 
   optimization: {
