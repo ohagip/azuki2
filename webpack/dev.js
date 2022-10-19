@@ -13,5 +13,20 @@ module.exports = merge(commonConfiguration, {
     // liveReloadを有効にするときはHMRを無効する
     // liveReload: true,
     // hot: false,
+    // static: {
+    //   directory: path.resolve(__dirname, `../src/**/`),
+    // },
+    // proxy: {
+    //   '/api': {
+    //     target: 'https://exsample.com',
+    //     pathRewrite: { '^/peco': '' },
+    //     changeOrigin: true,
+    //   },
+    //   '/api_**': {
+    //     target: 'https://exsample.com',
+    //     pathRewrite: { '^/api_**': '' },
+    //     changeOrigin: true,
+    //   },
+    // },
   },
 })
